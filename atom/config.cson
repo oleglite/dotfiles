@@ -1,0 +1,47 @@
+"*":
+  core:
+    allowPendingPaneItems: false
+    disabledPackages: [
+      "double-click-tree-view"
+      "js-refactor"
+      "linter-csslint"
+      "linter-jshint"
+    ]
+    projectHome: "/Users/oleg/Dev"
+    themes: [
+      "one-light-ui"
+      "one-light-syntax"
+    ]
+  editor:
+    autoIndentOnPaste: false
+    fontSize: 11
+    lineHeight: 1.4
+    preferredLineLength: 100
+    tabType: "soft"
+  "exception-reporting":
+    userId: "afd905bf-e273-c0fe-9f70-5738f5ed91d4"
+  "highlight-selected":
+    highlightBackground: true
+  linter:
+    ignoredMessageTypes: [
+      "E054"
+    ]
+    showErrorPanel: false
+    showProviderName: false
+  "linter-jshint":
+    lintJSXFiles: true
+  minimap:
+    plugins:
+      "highlight-selected": true
+      "highlight-selectedDecorationsZIndex": 0
+    textOpacity: 0.4
+  react:
+    enabledForAllJavascriptFiles: true
+  welcome:
+    showOnStartup: false
+".coffee.jsx.source":
+  editor:
+    preferredLineLength: 100
+".js.jsx.source":
+  editor:
+    preferredLineLength: 100

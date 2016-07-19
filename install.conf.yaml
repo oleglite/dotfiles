@@ -1,0 +1,14 @@
+- defaults:
+    link:
+      create: true
+      force: true
+      relink: true
+
+- link:
+    ~/.vimrc: vimrc
+    ~/.bash_profile: bash_profile
+    ~/.atom/config.cson: atom/config.cson
+    ~/.atom/init.coffee: atom/init.coffee
+    ~/.atom/keymap.cson: atom/keymap.cson
+    ~/.atom/styles.less: atom/styles.less
+
