@@ -1,8 +1,8 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
-__DEFAULT_COLOR="[1;00m"
-__GRAY_COLOR="[1;37m"
+__DEFAULT_COLOR="[0;00m"
+__GRAY_COLOR="[0;37m"
 __PINK_COLOR="[1;35m"
 __GREEN_COLOR="[1;32m"
 __ORANGE_COLOR="[1;33m"
