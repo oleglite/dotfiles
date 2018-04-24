@@ -102,5 +102,8 @@ if [ -f /etc/bash_completion ]; then
   . /etc/bash_completion
 fi
 
+HISTSIZE=10000                      # custom history size
+HISTFILESIZE=100000                 # custom history file size
+
 . ~/.bashrc.local
 . ~/.myprofile

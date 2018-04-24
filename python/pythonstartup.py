@@ -72,6 +72,11 @@ def _init():
     helpers.time = time.time
     __builtin__.h = helpers
 
+    try:
+        from IPython import embed; embed()
+        sys.exit()
+    except ImportError:
+        print("IPython is not isntalled")
 
 _init()
 del _init

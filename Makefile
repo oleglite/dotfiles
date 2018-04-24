@@ -1,4 +1,4 @@
-install: install-vim install-bash install-virtualenvwrapper
+install: install-vim install-bash install-virtualenvwrapper install-python
 
 install-orig: install-vim install-bash install-zsh install-psql \
          install-virtualenvwrapper \
