@@ -10,7 +10,10 @@ def _init():
     import types
     import time
     import uuid
-    import pprint
+    try:
+        import pprintpp as pprint
+    except ImportError:
+        import pprint
     import hashlib
     import datetime
     try:
