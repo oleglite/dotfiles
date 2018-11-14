@@ -8,6 +8,7 @@ install-vim:
 	rm -rf ~/.vim ~/.vimrc
 	ln -s `pwd`/vim ~/.vim
 	ln -s ~/.vim/vimrc ~/.vimrc
+	mkdir -p ~/.vim/sessions
 
 install-sh:
 	rm -f ~/.myprofile
