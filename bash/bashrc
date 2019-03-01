@@ -22,7 +22,13 @@ else
   __HAVE_VCPROMPT=0
 fi
 
-mitsuhikos_vcprompt() {
+prompt_time() {
+  echo -n $'\033[34m'
+  echo -n $(date '+%H:%M:%S')
+  echo -n $'\033[37m'
+}
+
+prompt_vcprompt() {
   path=`pwd`
   prompt="$__VC_PROMPT_EX"
   if [ $__HAVE_VCPROMPT == 1 ]; then
@@ -30,7 +36,7 @@ mitsuhikos_vcprompt() {
   fi
 }
 
-mitsuhikos_lastcommandfailed() {
+prompt_lastcommandfailed() {
   code=$?
   if [ $code != 0 ]; then
     echo -n $'\033[37m exited \033[31m'
@@ -39,7 +45,7 @@ mitsuhikos_lastcommandfailed() {
   fi
 }
 
-mitsuhikos_backgroundjobs() {
+prompt_backgroundjobs() {
   jobs|python -c 'if 1:
     import sys
     items = ["\033[36m%s\033[37m" % x.split()[2]
@@ -53,7 +59,7 @@ mitsuhikos_backgroundjobs() {
   '
 }
 
-mitsuhikos_virtualenv() {
+prompt_virtualenv() {
   if [ x$VIRTUAL_ENV != x ]; then
     if [[ $VIRTUAL_ENV == *.virtualenvs/* ]]; then
       ENV_NAME=`basename "${VIRTUAL_ENV}"`
@@ -76,13 +82,15 @@ mitsuhikos_virtualenv() {
   bind '"\C-w": unix-filename-rubout'
 }
 
-export __BASEPROMPT='\e]0;\007\n\e${__USER_COLOR}\u \
+export __BASEPROMPT='\e]0;\007\n\
+[`prompt_time`] \
+\e${__USER_COLOR}\u \
 \e${__GRAY_COLOR}at \e${__ORANGE_COLOR}\h \
 \e${__GRAY_COLOR}in \e${__GREEN_COLOR}\w\
-`mitsuhikos_lastcommandfailed`\
-\e${__GRAY_COLOR}`mitsuhikos_vcprompt`\
-`mitsuhikos_backgroundjobs`\
-`mitsuhikos_virtualenv`\
+`prompt_lastcommandfailed`\
+\e${__GRAY_COLOR}`prompt_vcprompt`\
+`prompt_backgroundjobs`\
+`prompt_virtualenv`\
 \e${__DEFAULT_COLOR}'
 export PS1="\[\033[G\]${__BASEPROMPT}
 $ "
