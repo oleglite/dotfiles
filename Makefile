@@ -17,6 +17,7 @@ install-sh:
 install-bash: install-sh
 	rm -f ~/.bashrc
 	ln -s `pwd`/bash/bashrc ~/.bashrc
+	ln -s `pwd`/bash/bash_aliases ~/.bash_aliases
 
 install-zsh: install-sh
 	rm -f ~/.zshrc

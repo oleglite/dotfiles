@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+alias ag='ag --color'
+alias utcnow='date -u +"%Y-%m-%dT%H:%M:%SZ"'
+alias now='date +%Y-%m-%dT%H:%M:%S%z'

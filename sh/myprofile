@@ -14,7 +14,7 @@ else
 fi
 export IGNOREEOF=1
 export PYTHONDONTWRITEBYTECODE=1
-export LESS=FRSX
+export LESS=R
 
 # virtualenvwrapper and pip
 if [[ `id -u` != '0' ]]; then
